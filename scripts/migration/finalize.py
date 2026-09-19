@@ -125,9 +125,18 @@ def md_to_html(t):
     t = re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)', r'<em>\1</em>', t)
     return t.replace('&#123;', '{').replace('&#125;', '}').strip()
 
+# Notion falls back to the literal word "image" when a block has no alt text. That is
+# not a caption, and as alt text it is worse than nothing - screen readers already
+# announce the role. Drop it rather than rendering a meaningless line under the photo.
+PLACEHOLDER = {'image', 'images', 'photo', 'img', 'untitled', ''}
+
 for rec in photos.values():
+    if (rec.get('caption') or '').strip().lower() in PLACEHOLDER:
+        rec['caption'] = ''
     rec['captionHtml'] = md_to_html(rec.get('caption'))
     rec['alt'] = re.sub(r'\s{2,}', ' ', re.sub(r'<[^>]+>', '', rec.get('alt') or '')).strip()
+    if rec['alt'].strip().lower() in PLACEHOLDER:
+        rec['alt'] = ''
 
 json.dump(photos, open(os.path.join(PROJ, 'src', 'lib', 'data', 'photos.json'), 'w', encoding='utf8'),
           indent=2, ensure_ascii=False)
