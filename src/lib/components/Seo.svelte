@@ -1,7 +1,8 @@
 <script>
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 
-	let { title, description = '', image = '/favicon.png' } = $props();
+	let { title, description = '', image = `${base}/favicon.png` } = $props();
 
 	const SITE = '3rd Party Influence';
 	const full = $derived(title && title !== 'Home' ? `${title} — ${SITE}` : `${SITE} — Live Techno with Eurorack Modular synthesizers`);

@@ -39,9 +39,14 @@ jobs:
           path: static/images
           key: images-${{ hashFiles('media/**', 'scripts/build-images.mjs') }}
 
-      - run: npm run build
-
       - uses: actions/configure-pages@v5
+        id: pages
+
+      - run: npm run build
+        env:
+          # GitHub Pages serves this repo at /<repo-name> until a custom domain is set.
+          # Once 3pi.tv points here, delete this env block so the base path is empty.
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

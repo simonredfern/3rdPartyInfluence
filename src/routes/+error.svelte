@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import nav from '$lib/data/nav.json';
 </script>
@@ -12,8 +13,8 @@
 <p>Try one of these instead:</p>
 
 <ul>
-	<li><a href="/">Home</a></li>
+	<li><a href="{base}/">Home</a></li>
 	{#each nav as item (item.slug)}
-		<li><a href="/{item.slug}">{item.title}</a></li>
+		<li><a href="{base}/{item.slug}">{item.title}</a></li>
 	{/each}
 </ul>

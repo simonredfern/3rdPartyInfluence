@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import photos from '$lib/data/photos.json';
 	import sizes from '$lib/data/photo-sizes.json';
 
@@ -19,9 +20,9 @@
 	});
 
 	const srcset = $derived(
-		(ext) => dim.widths.map((w) => `/images/${id}-${w}.${ext} ${w}w`).join(', ')
+		(ext) => dim.widths.map((w) => `${base}/images/${id}-${w}.${ext} ${w}w`).join(', ')
 	);
-	const full = $derived(`/images/${id}-${dim.widths[dim.widths.length - 1]}.${dim.ext}`);
+	const full = $derived(`${base}/images/${id}-${dim.widths[dim.widths.length - 1]}.${dim.ext}`);
 	const hasCaption = $derived(Boolean(meta.captionHtml || meta.credit));
 </script>
 

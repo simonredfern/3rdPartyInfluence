@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import nav from '$lib/data/nav.json';
 
@@ -8,8 +9,8 @@
 
 <header class="site-header">
 	<div class="site-header__bar">
-		<a class="brand" href="/" onclick={() => (open = false)}>
-			<img src="/favicon.png" alt="" width="26" height="26" />
+		<a class="brand" href="{base}/" onclick={() => (open = false)}>
+			<img src="{base}/favicon.png" alt="" width="26" height="26" />
 			<span>/// 3rd Party Influence ///</span>
 		</a>
 
@@ -29,8 +30,8 @@
 			{#each nav as item (item.slug)}
 				<li>
 					<a
-						href="/{item.slug}"
-						aria-current={current === `/${item.slug}` ? 'page' : undefined}
+						href="{base}/{item.slug}"
+						aria-current={current === `${base}/${item.slug}` ? 'page' : undefined}
 						onclick={() => (open = false)}
 					>
 						{item.short}

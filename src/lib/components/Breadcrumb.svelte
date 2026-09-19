@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import pages from '$lib/data/pages.json';
 
 	let { path } = $props();
@@ -17,10 +18,10 @@
 </script>
 
 <nav class="crumbs" aria-label="Breadcrumb">
-	<a href="/">Home</a>
+	<a href="{base}/">Home</a>
 	{#each trail as crumb (crumb.path)}
 		<span aria-hidden="true">/</span>
-		<a href="/{crumb.path}">{crumb.title}</a>
+		<a href="{base}/{crumb.path}">{crumb.title}</a>
 	{/each}
 </nav>
 
