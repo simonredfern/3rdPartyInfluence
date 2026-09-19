@@ -1,0 +1,62 @@
+[
+  {
+    "path": "",
+    "title": "Home",
+    "description": "3rd Party Influence makes and performs techno live and improvised with Eurorack and modular synthesizers and drum machines ."
+  },
+  {
+    "path": "3pi-rootz-and-hiztory",
+    "title": "3PI Rootz and Hiztory",
+    "description": "3rd Party Influence started life when Simon Redfern and Torsten Müller met in New Zealand at the University of Aukland computer music lab circa 2002 and they started messing around with drum machines and synths. Some verrrry lucky parties and venues had the pleazure of their sonic company."
+  },
+  {
+    "path": "artists-activists-and-audiences",
+    "title": "Artists Activists and Audiences",
+    "description": "Artists, Activists and Audiences is a series of one hour audio programs broadcast on 90mil Radio in which we explore the artists’ work and their processes, motivations, topics of interest and activism - and their evolving relationship to their audiences."
+  },
+  {
+    "path": "artists-activists-and-audiences/aaa-upcoming",
+    "title": "AAA Upcoming",
+    "description": "This episode is to be re-scheduled."
+  },
+  {
+    "path": "corporate-and-sporting-events",
+    "title": "Corporate, Sporting and Education events",
+    "description": "Whilst we normally perform at clubs and parties, we sometimes play at corporate, sporting and education events too!"
+  },
+  {
+    "path": "gig-archive",
+    "title": "Gig Archive",
+    "description": "Simon played 20:00 to 21:00 or a bit more"
+  },
+  {
+    "path": "media-assets",
+    "title": "Media Assets",
+    "description": ""
+  },
+  {
+    "path": "modular-artists-for-planet-and-peoples",
+    "title": "Modular Artists For Planet and Peoples",
+    "description": "As modular artists - in the broadest sense of the term - we are frequently using, shaping and creating technology, instruments and controllers to support and inspire our creative endeavors."
+  },
+  {
+    "path": "modular-learning",
+    "title": "Modular Learning Sessions",
+    "description": "Would you like to learn the basics or not-so-basics of Modular synthesis and Eurorack?"
+  },
+  {
+    "path": "modular-transport",
+    "title": "Modular Transport",
+    "description": "Getting to gigs by bike…"
+  },
+  {
+    "path": "module-co2e",
+    "title": "Module CO2e",
+    "description": "Getting the CO2e production cost of electronics is tricky."
+  },
+  {
+    "path": "sequencer-software",
+    "title": "Sequencer Software",
+    "description": "Simon writes open source (Eurorack) sequencer software for (mainly) open source hardware. See:"
+  }
+]

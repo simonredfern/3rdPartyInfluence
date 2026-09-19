@@ -1,0 +1,10 @@
+node_modules/
+.svelte-kit/
+build/
+
+# Generated from media/ by `npm run images` - never edited by hand.
+static/images/
+src/lib/data/photo-sizes.json
+
+# LibreOffice lock files
+.~lock.*#
