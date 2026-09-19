@@ -16,7 +16,6 @@ PAGES = [
     ('p_sequencer-software.html', 'sequencer-software', 'Sequencer Software'),
     ('p_gig-archive.html', 'gig-archive', 'Gig Archive'),
     ('p_media-assets.html', 'media-assets', 'Media Assets'),
-    ('p_aaa-upcoming.html', 'artists-activists-and-audiences/aaa-upcoming', 'AAA Upcoming'),
 ]
 
 class Node:

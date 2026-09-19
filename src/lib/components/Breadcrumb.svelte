@@ -4,7 +4,7 @@
 
 	let { path } = $props();
 
-	/** Ancestor pages, so a nested page like aaa-upcoming links back to its parent. */
+	/** Ancestor pages, so any nested page links back to its parent. */
 	const trail = $derived.by(() => {
 		const parts = path.split('/').filter(Boolean);
 		const out = [];

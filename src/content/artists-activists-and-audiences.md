@@ -135,5 +135,3 @@ or here: [https://www.mixcloud.com/90milradio/artists-audiences-and-activism-hos
 ## The AAA Calendar
 
 <Embed src="https://calendar.google.com/calendar/embed?src=97571bd1e23fade2fbd604bed9cf8f7ffad29d4776c58a2e1e7552a741119df1%40group.calendar.google.com&ctz=Europe%2FBerlin" title="calendar.google.com" />
-
-- [AAA Upcoming](/artists-activists-and-audiences/aaa-upcoming)
