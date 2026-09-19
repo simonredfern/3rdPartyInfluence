@@ -75,18 +75,31 @@ One entry in `src/lib/data/gigs.json`:
 ```json
 {
   "date": "2026-11-14",
-  "name": "Berlin Modular Society, BMS61",
-  "venue": "Klunkerkranich",
-  "city": "Berlin",
-  "url": null,
-  "note": "Closing set"
+  "parts": [
+    { "text": "BMS61", "url": "https://berlinmodularsociety.com/" },
+    { "text": "Klunkerkranich", "url": "https://klunkerkranich.org/" },
+    { "text": "Berlin" }
+  ],
+  "note": "Closing set",
+  "sets": [
+    { "time": "22:00", "what": "3rd Party Influence", "where": "Rooftop" }
+  ]
 }
 ```
 
-Anything dated today or later shows as upcoming; the rest fall into the archive. The
-homepage "Next gig" box and `/gig-archive` both read this file, so they cannot disagree.
+`parts` is the title, joined with commas. Any part can carry a `url`, so links live in
+the title itself - "BMS61" points at Berlin Modular Society, the venue at the venue.
+There is no separate row of links.
 
-Dates are evaluated at build time, then re-checked in the browser after hydration — so a
+`note` is one short line under the date. `sets` renders as set times: each takes `time`
+and `what`, plus optional `who` (who is playing, if it is not the band), `where` (which
+room) and `url` (a link on the act, e.g. ambienttaichi.com).
+
+Only `date` and `parts` are required. Anything dated today or later shows as upcoming;
+the rest fall into the archive. The homepage "Next gig" section and `/gig-archive` both
+read this file, so they cannot disagree.
+
+Dates are evaluated at build time, then re-checked in the browser after hydration - so a
 gig will not sit there stale between deploys. If you want the served HTML itself always
 current, schedule a periodic rebuild on your host.
 

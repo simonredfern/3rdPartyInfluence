@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import { splitGigs, formatGigDate, gigTitle } from '$lib/gigs.js';
+	import { splitGigs, formatGigDateLong } from '$lib/gigs.js';
+	import SetTimes from '$lib/components/SetTimes.svelte';
+	import GigTitle from '$lib/components/GigTitle.svelte';
 
 	let now = $state(new Date());
 	const split = $derived(splitGigs(now));
@@ -15,49 +17,60 @@
 {#if next}
 	<aside class="next-gig">
 		<h2 class="next-gig__label">Next gig</h2>
+
 		<p class="next-gig__what">
-			{#if next.url}
-				<a href={next.url} target="_blank" rel="noopener noreferrer">{gigTitle(next)}</a>
-			{:else}{gigTitle(next)}{/if}
+			<time class="next-gig__when" datetime={next.date}>{formatGigDateLong(next.when)}</time><span
+				class="next-gig__dash">&nbsp;—&nbsp;</span
+			><GigTitle parts={next.parts} />
 		</p>
-		<p class="next-gig__when">
-			<time datetime={next.date}>{formatGigDate(next.when)}</time>
-			{#if next.note}<span class="next-gig__note">— {next.note}</span>{/if}
-		</p>
+
+		{#if next.note}
+			<p class="next-gig__note">{next.note}</p>
+		{/if}
+
+		<SetTimes sets={next.sets ?? []} />
 	</aside>
 {/if}
 
 <style>
 	.next-gig {
-		margin: 2.5rem 0;
-		padding: 1.25rem 1.5rem;
-		border-left: 3px solid var(--accent);
-		background: var(--surface);
-		border-radius: 0 2px 2px 0;
+		margin: 2.75rem 0;
+		padding: 1.1rem 0 1.25rem;
+		border-top: 1px solid var(--rule);
+		border-bottom: 1px solid var(--rule);
 	}
 
 	.next-gig__label {
-		margin: 0 0 0.35rem;
-		font-size: 0.75rem;
+		margin: 0 0 0.5rem;
+		font-size: 0.72rem;
 		font-weight: 600;
-		letter-spacing: 0.14em;
+		letter-spacing: 0.16em;
 		text-transform: uppercase;
 		color: var(--accent);
 	}
 
 	.next-gig__what {
 		margin: 0;
-		font-size: 1.3rem;
-		font-weight: 600;
-		line-height: 1.3;
+		font-size: 1.35rem;
+		font-weight: 700;
+		line-height: 1.25;
+		letter-spacing: -0.01em;
 	}
 
 	.next-gig__when {
-		margin: 0.35rem 0 0;
+		color: var(--text-muted);
+		font-variant-numeric: tabular-nums;
+	}
+
+	.next-gig__dash {
 		color: var(--text-muted);
 	}
 
 	.next-gig__note {
-		opacity: 0.85;
+		margin: 0.5rem 0 0;
+		color: var(--text-muted);
+		font-size: 0.92rem;
+		line-height: 1.55;
 	}
+
 </style>

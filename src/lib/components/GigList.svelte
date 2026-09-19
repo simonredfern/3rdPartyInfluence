@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import { splitGigs, formatGigDate, gigTitle } from '$lib/gigs.js';
+	import { splitGigs, formatGigDate } from '$lib/gigs.js';
+	import SetTimes from '$lib/components/SetTimes.svelte';
+	import GigTitle from '$lib/components/GigTitle.svelte';
 
 	let { show = 'past' } = $props();
 
@@ -15,16 +17,13 @@
 
 {#if list.length}
 	<ul class="gigs">
-		{#each list as gig (gig.date + gig.name)}
+		{#each list as gig (gig.date)}
 			<li class="gig">
 				<time class="gig__date" datetime={gig.date}>{formatGigDate(gig.when)}</time>
 				<div class="gig__body">
-					<span class="gig__what">
-						{#if gig.url}
-							<a href={gig.url} target="_blank" rel="noopener noreferrer">{gigTitle(gig)}</a>
-						{:else}{gigTitle(gig)}{/if}
-					</span>
+					<span class="gig__what"><GigTitle parts={gig.parts} /></span>
 					{#if gig.note}<span class="gig__note">{gig.note}</span>{/if}
+					<SetTimes sets={gig.sets ?? []} />
 				</div>
 			</li>
 		{/each}
@@ -70,6 +69,7 @@
 		color: var(--text-muted);
 		font-size: 0.9rem;
 	}
+
 
 	@media (max-width: 34rem) {
 		.gig {

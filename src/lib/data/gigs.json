@@ -1,50 +1,112 @@
 [
   {
     "date": "2026-09-25",
-    "name": "Pollen festival",
-    "venue": "90Mil",
-    "city": "Berlin",
-    "url": null,
-    "note": null
+    "parts": [
+      {
+        "text": "BMS59",
+        "url": "https://berlinmodularsociety.com/"
+      },
+      {
+        "text": "Pollen festival",
+        "url": "https://ra.co/events/2536386"
+      },
+      {
+        "text": "90Mil"
+      },
+      {
+        "text": "Berlin"
+      }
+    ],
+    "sets": [
+      {
+        "time": "19:30",
+        "what": "Ambient Tai Chi",
+        "where": "Movement Space or outside",
+        "url": "https://www.ambienttaichi.com/"
+      },
+      {
+        "time": "02:00",
+        "what": "3rd Party Influence",
+        "where": "Project Space"
+      }
+    ]
   },
   {
     "date": "2026-07-03",
-    "name": "The Field",
-    "venue": "The Field",
-    "city": "40km south of Berlin",
-    "url": "https://intothefield.de/",
+    "parts": [
+      {
+        "text": "The Field",
+        "url": "https://intothefield.de/"
+      },
+      {
+        "text": "40km south of Berlin"
+      }
+    ],
     "note": "Simon played 20:00 to 21:00 or a bit more"
   },
   {
     "date": "2026-06-21",
-    "name": "Fête de la Musique 2026",
-    "venue": "Heynhofe",
-    "city": "Berlin",
-    "url": "https://www.heynhoefe.de/",
+    "parts": [
+      {
+        "text": "Fête de la Musique 2026"
+      },
+      {
+        "text": "Heynhöfe",
+        "url": "https://www.heynhoefe.de/"
+      },
+      {
+        "text": "Berlin"
+      }
+    ],
     "note": "We played 16:00 to 17:00"
   },
   {
     "date": "2026-05-10",
-    "name": "Berlin Modular Society, BMS58",
-    "venue": "Klunkerkranich",
-    "city": "Berlin",
-    "url": null,
+    "parts": [
+      {
+        "text": "BMS58",
+        "url": "https://berlinmodularsociety.com/"
+      },
+      {
+        "text": "Klunkerkranich",
+        "url": "https://klunkerkranich.org/"
+      },
+      {
+        "text": "Berlin"
+      }
+    ],
     "note": "Closing set, 1 hour +"
   },
   {
     "date": "2025-06-14",
-    "name": "Pollen — 90mil Radio Festival",
-    "venue": "90Mil",
-    "city": "Berlin",
-    "url": null,
+    "parts": [
+      {
+        "text": "Pollen — 90mil Radio Festival",
+        "url": "https://ra.co/events/2188053"
+      },
+      {
+        "text": "90Mil"
+      },
+      {
+        "text": "Berlin"
+      }
+    ],
     "note": "01:00 until 03:00"
   },
   {
     "date": "2025-04-27",
-    "name": "De Helling",
-    "venue": "De Helling, Helling 7",
-    "city": "Utrecht, Netherlands",
-    "url": "https://dehelling.nl/",
+    "parts": [
+      {
+        "text": "De Helling",
+        "url": "https://dehelling.nl/"
+      },
+      {
+        "text": "Helling 7"
+      },
+      {
+        "text": "Utrecht, Netherlands"
+      }
+    ],
     "note": "With Berlin Modular Society"
   }
 ]

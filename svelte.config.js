@@ -19,6 +19,9 @@ const config = {
 					rehypeAutolinkHeadings,
 					{
 						behavior: 'append',
+						// h1 is the page title; an anchor to it would just link to the top
+						// of the page you are already on.
+						test: ['h2', 'h3', 'h4', 'h5', 'h6'],
 						properties: { className: 'heading-anchor', ariaHidden: 'true', tabIndex: -1 },
 						content: { type: 'text', value: '#' }
 					}

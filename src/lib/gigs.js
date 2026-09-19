@@ -21,7 +21,12 @@ export function formatGigDate(d) {
 	return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-export function gigTitle(g) {
-	const where = [g.venue, g.city].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i);
-	return [g.name, ...where.filter((w) => w !== g.name)].join(', ');
+/** With the weekday - worth the extra words for a gig that has not happened yet. */
+export function formatGigDateLong(d) {
+	return d.toLocaleDateString('en-GB', {
+		weekday: 'long',
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric'
+	});
 }

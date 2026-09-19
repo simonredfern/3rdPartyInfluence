@@ -7,9 +7,8 @@
 
 	// page.url.pathname is not resolved while prerendering, so deriving anything from it
 	// leaves the static HTML wrong until hydration. route.id and params are known at build
-	// time, so the active item and the h1 are correct in the served HTML.
-	const isHome = $derived(page.route.id === '/');
-	const currentSlug = $derived(isHome ? '' : (page.params.path ?? null));
+	// time, so the active menu item is correct in the served HTML.
+	const currentSlug = $derived(page.route.id === '/' ? '' : (page.params.path ?? null));
 </script>
 
 <header class="site-header">
@@ -50,11 +49,7 @@
 			height="629"
 			fetchpriority="high"
 		/>
-		{#if isHome}
-			<h1 class="masthead__title">/// 3rd Party Influence ///</h1>
-		{:else}
-			<span class="masthead__title">/// 3rd Party Influence ///</span>
-		{/if}
+		<span class="masthead__title">/// 3rd Party Influence ///</span>
 	</a>
 </header>
 

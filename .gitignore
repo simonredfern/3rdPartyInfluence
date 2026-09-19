@@ -8,3 +8,8 @@ src/lib/data/photo-sizes.json
 
 # LibreOffice lock files
 .~lock.*#
+
+# Scratch space for local experiments, screenshots and throwaway scripts.
+# Kept in the project so tooling never has to reach outside the working directory.
+tmp/*
+!tmp/.gitkeep

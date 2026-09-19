@@ -11,9 +11,7 @@ description: "3rd Party Influence makes and performs techno live and improvised 
 	import Photo from '$lib/components/Photo.svelte';
 </script>
 
-## We make live minimal Techno with modular synths.
-
-Don’t forget, lets ***Get CO2 Down!*** *(a 12 km drive creates 2kg of CO2!)*
+# Live minimal Techno with modular synths! <span class="h1-aside">Don’t forget, lets <strong><em>Get CO2 Down!</em></strong> <em>(a 12 km drive creates 2kg of CO2!)</em></span>
 
 <NextGig />
 
