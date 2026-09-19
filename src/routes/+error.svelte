@@ -13,7 +13,6 @@
 <p>Try one of these instead:</p>
 
 <ul>
-	<li><a href="{base}/">Home</a></li>
 	{#each nav as item (item.slug)}
 		<li><a href="{base}/{item.slug}">{item.title}</a></li>
 	{/each}

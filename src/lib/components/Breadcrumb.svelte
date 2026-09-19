@@ -17,13 +17,15 @@
 	});
 </script>
 
-<nav class="crumbs" aria-label="Breadcrumb">
-	<a href="{base}/">Home</a>
-	{#each trail as crumb (crumb.path)}
-		<span aria-hidden="true">/</span>
-		<a href="{base}/{crumb.path}">{crumb.title}</a>
-	{/each}
-</nav>
+<!-- Home lives in the main menu, so this renders only for pages that sit under another page. -->
+{#if trail.length}
+	<nav class="crumbs" aria-label="Breadcrumb">
+		{#each trail as crumb, i (crumb.path)}
+			{#if i > 0}<span aria-hidden="true">/</span>{/if}
+			<a href="{base}/{crumb.path}">{crumb.title}</a>
+		{/each}
+	</nav>
+{/if}
 
 <style>
 	.crumbs {

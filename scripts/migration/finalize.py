@@ -11,6 +11,7 @@ photos = json.load(open(os.path.join(OUT, 'photos.json'), encoding='utf8'))
 idmap = json.load(open(os.path.join(OUT, 'idmap.json'), encoding='utf8'))
 
 NAV = [
+    ('', 'Home', 'Home'),
     ('3pi-rootz-and-hiztory', '3PI Rootz and Hiztory', 'Rootz'),
     ('module-co2e', 'Module CO2e', 'CO2e'),
     ('modular-learning', 'Modular Learning Sessions', 'Learning'),
