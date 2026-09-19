@@ -26,7 +26,7 @@ Everything that *is* the site, rather than what renders it, is **not** open lice
 - `media/` — all photographs
 - `static/favicon.png`
 
-Copyright © 3rd Party Influence and the individual photographers. All rights reserved.
+Copyright © Simon Redfern and the individual photographers. Music is © Simon Redfern or © Simon Redfern and Daniel Tippmann. All rights reserved.
 Not covered by the AGPL. Please ask before reusing any of it.
 
 ### Photograph filenames carry the rights holder
