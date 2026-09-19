@@ -34,7 +34,7 @@ The interview will be broadcast on [90Mil Radio](https://radio.90mil.berlin/) (h
 
 <Embed src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2F90milradio%2Fartists-activists-and-audiences-hosted-by-3rd-party-influence-12%2F&hide_cover=1" title="www.mixcloud.com" />
 
-## AAA9, Julia Katerina
+## AAA9, Julia Katarina
 
 This was a slight remix  of the first episode which took the form of an audio collage incorporating conversations and Oud recordings made over a couple of days whilst Julia was in Lebanon.
 
