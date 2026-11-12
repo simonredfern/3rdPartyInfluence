@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-26",
+    "parts": [
+      {
+        "text": "VIBRA"
+      },
+      {
+        "text": "Lauschangriff"
+      },
+      {
+        "text": "Berlin"
+      }
+    ],
+    "note": "We play 23:00 to midnight",
+    "sets": [
+      {
+        "time": "23:00",
+        "what": "3rd Party Influence"
+      }
+    ]
+  },
+  {
     "date": "2026-09-25",
     "parts": [
       {
